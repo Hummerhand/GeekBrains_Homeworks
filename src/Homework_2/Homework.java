@@ -83,8 +83,5 @@ public class Homework {
         return false;
     }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 754bbd5b499a00393a0f56c5e2d8123fbe8b875d
 }
