@@ -3,6 +3,7 @@ package Homework_2;
 public class Homework {
     public static void main(String[] args) {
 
+
         //System.out.println(sumIn(5, 61));
         //positiveAndNegative(-1);
         //System.out.println(positiveAndNegativeReturn(1));
@@ -78,5 +79,6 @@ public class Homework {
          }
         return false;
     }
+
 
 }
