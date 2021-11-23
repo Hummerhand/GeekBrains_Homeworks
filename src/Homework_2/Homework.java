@@ -3,6 +3,10 @@ package Homework_2;
 public class Homework {
     public static void main(String[] args) {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 754bbd5b499a00393a0f56c5e2d8123fbe8b875d
         //System.out.println(sumIn(5, 61));
         //positiveAndNegative(-1);
         //System.out.println(positiveAndNegativeReturn(1));
@@ -79,4 +83,8 @@ public class Homework {
         return false;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 754bbd5b499a00393a0f56c5e2d8123fbe8b875d
 }
