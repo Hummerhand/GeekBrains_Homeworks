@@ -1,5 +1,6 @@
 package Homework_4;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Homework_4 {
@@ -21,6 +22,7 @@ public class Homework_4 {
     public static final char DOT_O = 'O';
 
     public static Scanner scanner = new Scanner(System.in);
+    public static Random random = new Random();
 
     //================================================================================================================//
 
@@ -97,6 +99,20 @@ public class Homework_4 {
     /*
     8. Ход компьютера. Для реализации хода компьютера достаточно чуть изменить метод хода игрока,
     добавив туда генератор случайных чисел.
+     */
+    public static void aiTurn() {
+        int x, y;
+        do {
+            x = random.nextInt();
+            y = random.nextInt();
+        } while (!isCellValid(x, y));
+        System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y + 1));
+        map[y][x] = DOT_O;
+    }
+
+    /*
+    9. Проверка победы. Необходимо проверить все выигрышные комбинации.
+    Если хотя бы одна будет найдена, вернуть true
      */
 
 
