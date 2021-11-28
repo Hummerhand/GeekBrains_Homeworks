@@ -111,9 +111,31 @@ public class Homework_4 {
     }
 
     /*
-    9. Проверка победы. Необходимо проверить все выигрышные комбинации.
+    9. Проверка на то, заполнилась ли карта
+     */
+    public static boolean isMapFull() {
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if (map[i][j] == DOT_EMPTY) return false;
+            }
+        }
+        return true;
+    }
+
+    /*
+    10. Проверка победы. Необходимо проверить все выигрышные комбинации.
     Если хотя бы одна будет найдена, вернуть true
      */
-
+    public static boolean checkWin(char symbol) {
+        if(map[0][0] == symbol && map[0][1] == symbol && map[0][2] == symbol) return true;
+        if(map[1][0] == symbol && map[1][1] == symbol && map[1][2] == symbol) return true;
+        if (map[2][0] == symbol && map[2][1] == symbol && map[2][2] == symbol) return true;
+        if (map[0][0] == symbol && map[1][0] == symbol && map[2][0] == symbol) return true;
+        if (map[0][1] == symbol && map[1][1] == symbol && map[2][1] == symbol) return true;
+        if (map[0][2] == symbol && map[1][2] == symbol && map[2][2] == symbol) return true;
+        if (map[0][0] == symbol && map[1][1] == symbol && map[2][2] == symbol) return true;
+        if (map[2][0] == symbol && map[1][1] == symbol && map[0][2] == symbol) return true;
+        return false;
+    }
 
 }
