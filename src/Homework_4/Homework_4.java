@@ -79,7 +79,8 @@ public class Homework_4 {
     Теперь необходимо вывести его в консоль.
      */
     public static void printMap() {
-        for (int i = 0; i <= SIZE; i++) {
+        System.out.print("  ");
+        for (int i = 1; i <= SIZE; i++) {
             System.out.print(i + " ");
         }
         System.out.println();
