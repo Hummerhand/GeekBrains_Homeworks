@@ -34,6 +34,26 @@ public class Homework_4 {
         initMap();
         printMap();
 
+        while (true) {
+            humanTurn();
+            if (checkWin(DOT_X)) {
+                System.out.println("Победил человек");
+                break;
+            }
+            if (isMapFull()) {
+                System.out.println("Ничья");
+                break;
+            }
+            if (checkWin(DOT_O)) {
+                System.out.println("Победил Искуственный Интеллект");
+                break;
+            }
+            if (isMapFull()) {
+                System.out.println("Ничья");
+                break;
+            }
+        }
+
     }
 
     //================================================================================================================//
