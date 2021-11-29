@@ -36,6 +36,7 @@ public class Homework_4 {
 
         while (true) {
             humanTurn();
+            printMap();
             if (checkWin(DOT_X)) {
                 System.out.println("Победил человек");
                 break;
@@ -44,6 +45,8 @@ public class Homework_4 {
                 System.out.println("Ничья");
                 break;
             }
+            aiTurn();
+            printMap();
             if (checkWin(DOT_O)) {
                 System.out.println("Победил Искуственный Интеллект");
                 break;
@@ -53,7 +56,7 @@ public class Homework_4 {
                 break;
             }
         }
-
+        System.out.println("Игра закончена");
     }
 
     //================================================================================================================//
@@ -123,8 +126,8 @@ public class Homework_4 {
     public static void aiTurn() {
         int x, y;
         do {
-            x = random.nextInt();
-            y = random.nextInt();
+            x = random.nextInt(SIZE);
+            y = random.nextInt(SIZE);
         } while (!isCellValid(x, y));
         System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y + 1));
         map[y][x] = DOT_O;
