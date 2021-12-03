@@ -154,11 +154,11 @@ public class Homework_4 {
         for (int i = 0; i < 3; i++) {
             if ((map[i][0] == symbol && map[i][1] == symbol && map[i][2] == symbol) ||
                     ((map[0][i]) == symbol && map[1][i] == symbol && map[2][i] == symbol))
-            return true;
+                return true;
+        }
             if ((map[0][0] == symbol && map[1][1] == symbol && map[2][2] == symbol) ||
                     (map[2][0] == symbol && map[1][1] == symbol && map[0][2] == symbol))
             return true;
-        }
 
         return false;
     }
