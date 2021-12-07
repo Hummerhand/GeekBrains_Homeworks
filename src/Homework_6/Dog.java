@@ -2,6 +2,8 @@ package Homework_6;
 
 public class Dog extends Animal {
     private static int count;
+    private int maxLengthRun = 500;
+    private int maxLengthSwim = 10;
 
     public Dog() {
         count++;
@@ -17,8 +19,8 @@ public class Dog extends Animal {
 
     @Override
     public void run(int length) {
-        if (length > 500) {
-            System.out.println("Собака может пробежать не более 500 метров.");
+        if (length > maxLengthRun) {
+            System.out.println("Собака может пробежать не более " + maxLengthRun + " метров.");
             return;
         }
         System.out.println("Собака пробежала " + length + " метров.");
@@ -27,7 +29,7 @@ public class Dog extends Animal {
     @Override
     public void swim(int length) {
         if (length > 10) {
-            System.out.println("Собака может проплыть не более 10 метров.");
+            System.out.println("Собака может проплыть не более " + maxLengthSwim + " метров.");
             return;
         }
         System.out.println("Собака проплыла " + length + " метров.");
