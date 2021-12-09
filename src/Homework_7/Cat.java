@@ -39,15 +39,16 @@ public class Cat {
             if (plate.getFood() >= appetite) {
                 plate.decreaseFood(appetite);
                 setSatiety(satiety += appetite);
-                System.out.println("Кот поел и доволен");
+                System.out.println("Кот по кличке " + name + " поел и доволен");
             } else {
-                System.out.println("Кот по-есть не может, в тарелке не достаточно еды");
+                System.out.println("Кот по кличке " + name + " поесть не смог, в тарелке не достаточно еды");
             }
-            System.out.println("Сытость кота равна: " + satiety);
+            System.out.println("Сытость кота по кличке " + name + " равна: " + satiety);
             return;
         }
+        // На текущий момент логика не работает
         if (satiety >= 15) {
-            System.out.println("Кот сыть и есть не хочет");
+            System.out.println("Кот по кличке " + name + " сыть и есть не хочет");
             return;
         }
     }
