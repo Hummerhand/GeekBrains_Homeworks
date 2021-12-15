@@ -37,27 +37,27 @@ public class Logic {
 
             printMap();
             if (checkWin(DOT_X)) {
-                System.out.println("Победил человек");
+                //System.out.println("Победил человек");
                 return;
             }
             if (isMapFull()) {
-                System.out.println("Ничья");
+                //System.out.println("Ничья");
                 return;
             }
-            aiTurn();
+
             printMap();
             if (checkWin(DOT_O)) {
-                System.out.println("Победил Искуственный Интеллект");
+                //System.out.println("Победил Искуственный Интеллект");
                 return;
             }
             if (isMapFull()) {
-                System.out.println("Ничья");
+                //System.out.println("Ничья");
                 return;
             }
 
         gameFinished = false;
         }
-        //System.out.println("Игра закончена");
+
 
 
     //================================================================================================================//
@@ -80,19 +80,19 @@ public class Logic {
     Теперь необходимо вывести его в консоль.
      */
     public static void printMap() {
-        System.out.print("  ");
+        //System.out.print("  ");
         for (int i = 1; i <= SIZE; i++) {
-            System.out.print(i + " ");
+            //System.out.print(i + " ");
         }
-        System.out.println();
+        //System.out.println();
         for (int i = 0; i < SIZE; i++) {
-            System.out.print((i + 1) + " ");
+            //System.out.print((i + 1) + " ");
             for (int j = 0; j < SIZE; j++) {
-                System.out.print(map[i][j] + " ");
+                //System.out.print(map[i][j] + " ");
             }
-            System.out.println();
+            //System.out.println();
         }
-        System.out.println();
+        //System.out.println();
     }
 
     /*
@@ -122,14 +122,14 @@ public class Logic {
     8. Ход компьютера. Для реализации хода компьютера достаточно чуть изменить метод хода игрока,
     добавив туда генератор случайных чисел.
      */
-    public static void aiTurn() {
-        int x, y;
+    public static void aiTurn(int x, int y) {
         do {
             x = random.nextInt(SIZE);
             y = random.nextInt(SIZE);
         } while (!isCellValid(x, y));
-        System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y + 1));
+
         map[y][x] = DOT_O;
+        go();
     }
 
     /*
